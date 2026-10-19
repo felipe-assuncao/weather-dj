@@ -15,7 +15,9 @@ public class App {
 
     Clima clima = new Clima(cidade);
     String genero = Genero.getGenre(clima.getWeatherID(), clima.getTemperatura());
-    
+    System.out.println("Com base no tempo da sua loc. atual: " + clima.getWeatherName());
+    System.out.println("Recomendamos o seguinte gênero: " + genero + '\n');
+
     SpotifyClient spotify = new SpotifyClient();
     spotify.imprimirMusicas(genero);
   }

@@ -18,7 +18,7 @@ public class Genero {
 
     public static String getGenre(int climaId, double temperatura) {
         if (climaId == 800) {
-            return "desert rock";
+            return "rock";
         }
 
         // Tempestade
@@ -32,7 +32,7 @@ public class Genero {
             return "musica classica";
         }
         if (climaId > 800) { // nublado/parcialmente nublado
-            return "pop/raggae";
+            return "pop";
         }
         return "null";
     }

@@ -43,7 +43,7 @@ public class Clima {
       .retrieve()
       .asJava();
     } catch (NoDataFoundException e) {
-      System.out.println("Cidade não encontrada/inválida.");
+      System.err.println("Cidade não encontrada/inválida.");
     }
   
   }
