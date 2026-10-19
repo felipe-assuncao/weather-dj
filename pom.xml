@@ -44,7 +44,7 @@
     <dependency>
       <groupId>se.michaelthelin.spotify</groupId>
       <artifactId>spotify-web-api-java</artifactId>
-      <version>10.0.0</version>
+      <version>10.0.0-RC3</version>
     </dependency>
     <!-- API do OpenWeather para o clima -->
     <dependency>

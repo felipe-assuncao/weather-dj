@@ -14,10 +14,9 @@ public class App {
     String cidade = scan.nextLine().trim();
 
     Clima clima = new Clima(cidade);
-    System.out.println(clima.getSummarizedInfo());
-    System.out.println(clima.getWeatherID());
-    System.out.println(clima.getWeatherName());
-    System.out.println(clima.getWeatherDescription());
-    System.out.println(clima.getWeatherEnum());
+    String genero = Genero.getGenre(clima.getWeatherID(), clima.getTemperatura());
+    
+    SpotifyClient spotify = new SpotifyClient();
+    spotify.imprimirMusicas(genero);
   }
 }
