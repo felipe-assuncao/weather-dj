@@ -26,7 +26,7 @@ public class Servidor {
 
       try {
         Clima clima = new Clima(cidade);
-        String genero = Genero.getGenre(clima.getWeatherID(), clima.getTemperatura());
+        String genero = Genero.getGenre(clima.getWeatherID());
         out.println("Com base no tempo da sua loc. atual: " + clima.getWeatherName());
         out.println("Recomendamos o seguinte gênero: " + genero + '\n');
 

@@ -16,7 +16,7 @@ public class Genero {
      * @return Gênero musical correspondente ao tempo da cidade.
      */
 
-    public static String getGenre(int climaId, double temperatura) {
+    public static String getGenre(int climaId) {
         if (climaId == 800) {
             return "rock";
         }

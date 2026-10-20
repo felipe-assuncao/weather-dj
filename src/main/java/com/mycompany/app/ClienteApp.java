@@ -3,7 +3,6 @@ package com.mycompany.app;
 import java.io.*;
 import java.net.*;
 import java.util.Scanner;
-import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class ClienteApp {
   private static Scanner scan = new Scanner(System.in);
