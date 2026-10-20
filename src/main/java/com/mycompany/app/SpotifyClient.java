@@ -10,11 +10,16 @@ import se.michaelthelin.spotify.model_objects.credentials.ClientCredentials;
 import se.michaelthelin.spotify.requests.authorization.client_credentials.ClientCredentialsRequest;
 import java.util.Arrays;
 import java.util.List;
+import java.io.PrintStream;
 
 public class SpotifyClient {
   Dotenv envfile = Dotenv.load();
   String token = "";
   SpotifyApi spotifyApi = null;
+
+  public void imprimirMusicas(String genero) {
+    imprimirMusicas(genero, System.out, System.err);
+  }
 
   public SpotifyClient() {
     this.spotifyApi = new SpotifyApi.Builder()
@@ -45,20 +50,20 @@ public class SpotifyClient {
     return Arrays.asList(resultado.getItems());
   }
 
-  public void imprimirMusicas(String genero) {
+  public void imprimirMusicas(String genero, PrintStream out, PrintStream err) {
     try {
       List<Track> lista = listarMusicasPorGenero(genero);
 
       if (lista.isEmpty()) {
-        System.out.println("Nenhuma música encontrada para o gênero: " + genero);
+        out.println("Nenhuma música encontrada para o gênero: " + genero);
         return;
       }
 
       for (Track t : lista) {
-        System.out.println(t.getName() + " - " + t.getArtists()[0].getName());
+        out.println(t.getName() + " - " + t.getArtists()[0].getName());
       }
     } catch (Exception e) {
-      System.err.println("Erro ao buscar musicas: " + e.getMessage());
+      err.println("Erro ao buscar musicas: " + e.getMessage());
     }
   }
 }
