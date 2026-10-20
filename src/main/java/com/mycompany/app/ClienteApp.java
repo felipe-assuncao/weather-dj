@@ -12,7 +12,7 @@ public class ClienteApp {
     int porta = 9806;
 
     System.out.println("! Bem vindo ao DJ inteligente de clima !");
-    System.out.println("Com base no tempo da sua região, vou te recomendar uma playlist do Spotify");
+    System.out.println("Com base no tempo da sua região, vou te recomendar uma lista de músicas do Spotify");
     System.out.print("Diga em qual cidade você está: ");
     String cidade = scan.nextLine().trim();
 
