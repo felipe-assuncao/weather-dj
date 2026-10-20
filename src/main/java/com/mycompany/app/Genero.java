@@ -17,23 +17,37 @@ public class Genero {
      */
 
     public static String getGenre(int climaId) {
+        
+        //Céu limpo
         if (climaId == 800) {
-            return "rock";
+            return "Rock";
         }
 
         // Tempestade
         if (climaId <= 232) {
-            return "jazz";
+            return "Jazz";
         }
-        if (climaId < 600) { // Garoa e chuva
-            return "mpb";
+
+        //Garoa
+        if(climaId <= 321){
+            return "Mpb";
         }
-        if (climaId < 701) { // Neve
-            return "musica classica";
+
+        //Chuva
+        if (climaId < 600) { 
+            return "Lo-fi";
         }
-        if (climaId > 800) { // nublado/parcialmente nublado
-            return "pop";
+
+        //Neve
+        if (climaId < 701) {
+            return "Musica classica";
         }
+
+        //Nublado
+        if (climaId > 800) { 
+            return "Pop";
+        }
+
         return "null";
     }
 }
